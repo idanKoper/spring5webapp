@@ -1,7 +1,5 @@
 package guru.springframework.spring5webapp.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -93,4 +91,15 @@ public class Publisher {
         return id != null ? id.hashCode() : 0;
     }
 
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
+    }
 }

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Spring FrameWork Data</title>
+    <meta charset="UTF-8"/>
+    <title>Spring Framework Guru</title>
 </head>
 <body>
-
-<h1>Product List</h1>
+<h1>Book List</h1>
 
 <table>
     <tr>
@@ -14,9 +13,9 @@
         <th>Title</th>
         <th>Publisher</th>
     </tr>
-    <tr th:each=" book : ${books}">
+    <tr th:each="book : ${books}">
         <td th:text="${book.id}">123</td>
-        <td th:text="${book.title}">spring in Action</td>
+        <td th:text="${book.title}"> Spring in Action</td>
         <td th:text="${book.publisher.name}">Wrox</td>
     </tr>
 </table>

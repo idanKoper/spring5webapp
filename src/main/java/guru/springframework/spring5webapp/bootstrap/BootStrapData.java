@@ -6,12 +6,12 @@ import guru.springframework.spring5webapp.model.Publisher;
 import guru.springframework.spring5webapp.repositories.AuthorRepository;
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import guru.springframework.spring5webapp.repositories.PublisherRepository;
-import org.springframework.context.ApplicationListener;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BootStrapData implements ApplicationListener<ContextRefreshedEvent> {
+public class BootStrapData implements CommandLineRunner {
 
     private AuthorRepository authorRepository;
     private BookRepository bookRepository;
@@ -23,12 +23,13 @@ public class BootStrapData implements ApplicationListener<ContextRefreshedEvent>
         this.publisherRepository = publisherRepository;
     }
 
-    @Override
+/*    @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         initData();
-    }
+    }*/
 
-    public void initData() {
+    @Override
+    public void run(String... args) throws Exception {
 
         System.out.println("Started in Bootsrtap");
 
